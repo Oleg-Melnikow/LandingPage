@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sass/style.css">
     <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
 </head>
 <body>
-<header>
+<header class="header">
     <div class="wrap">
-        <div class="header-logo">SH<span>O</span>PNO</div>
-        <div class="header-greeting">
-            <h2 class="header-greeting__title">Say Hello to <span>SHOPNO!</span></h2>
-            <h2 class="header-greeting__title"><span>Agency</span> CORPORATE SHOPNO Theme</h2>
+        <a class="header__link" href="index.html">
+            <div class="header__logo">SH<span>O</span>PNO</div>
+        </a>
+        <div class="header__greeting">
+            <h2 class="header__title">Say Hello to <span>SHOPNO!</span></h2>
+            <h2 class="header__title"><span>Agency</span> CORPORATE SHOPNO Theme</h2>
         </div>
-        <button class="header-button">
-            <span class="header-button__title">CONTACT US</span>
+        <button class="button">
+            <span class="button__title">CONTACT US</span>
         </button>
     </div>
-
 </header>
 <main>
-    <section class="about grey">
+    <section class="about">
         <div class="wrap">
-            <div class="about__header headers">
+            <div class="about__header">
                 <h2 class="about__title title">ABOUT US</h2>
                 <p class="about__subtitle subtitle">Lorem ipsum dolor sit amet event landing template</p>
             </div>
-            <div class="about-content">
-                <div class="about-content__image">
+            <div class="content">
+                <div class="content__image">
                     <img src="image/about_img.png" alt="image"/>
                 </div>
-                <div class="about-content__block">
-                    <div class="about-content__describe">
-                        <h3 class="about-content__title">We Actually Do amazing works</h3>
-                        <p class="about-content__text text">A visual approach is an approach to a runway at an airport
+                <div class="content__block">
+                    <div class="content__describe">
+                        <h3 class="content__title">We Actually Do amazing works</h3>
+                        <p class="content__text">A visual approach is an approach to a runway at an airport
                             conducted under instrument flight rules.
                             The pilot must at all times have either the airport or the preceding aircraft in approach
                             correct
@@ -43,9 +44,9 @@
                             Preceding aircraft in approach correct sight. conducted under instrument flight rules.
                         </p>
                     </div>
-                    <div class="about-content__describe">
-                        <h3 class="about-content__title">why we are the great?</h3>
-                        <p class="about-content__text text">A visual approach is an approach to a runway at an airport
+                    <div class="content__describe">
+                        <h3 class="content__title">why we are the great?</h3>
+                        <p class="content__text">A visual approach is an approach to a runway at an airport
                             conducted under instrument flight rules. <br>
                             The preceding aircraft in approach correct sight.
                         </p>
@@ -58,22 +59,38 @@
 
     <section class="works">
         <div class="wrap">
-            <div class="works__header headers">
+            <div class="works__header">
                 <h2 class="works__title title">Featured Works</h2>
                 <p class="works__subtitle subtitle">Lorem ipsum dolor sit amet event landing template</p>
             </div>
-            <ul class="works-list list">
-                <li class="works-list__item item">
-                    <a href="#popup" class="popup-link">
+            <ul class="works__list list">
+                <li class="works__item item">
+                    <a href="#" class="popup-link">
                         <img src="image/works/banner3.png" alt="work_1">
                     </a>
                 </li>
-                <li class="works-list__item item"><img src="image/works/5.png" alt="work_2"></li>
-                <li class="works-list__item item"><img src="image/works/6.png" alt="work_3"></li>
-                <li class="works-list__item item"><img src="image/works/work4.png" alt="work_4"></li>
-                <li class="works-list__item item"><img src="image/works/9.png" alt="work_5"></li>
-                <li class="works-list__item item">
-                    <a href="#popup_2" class="popup-link">
+                <li class="works__item item">
+                    <a href="#" class="popup-link">
+                        <img src="image/works/5.png" alt="work_2">
+                    </a>
+                </li>
+                <li class="works__item item">
+                    <a href="#" class="popup-link">
+                        <img src="image/works/6.png" alt="work_3">
+                    </a>
+                </li>
+                <li class="works__item item">
+                    <a href="#" class="popup-link">
+                        <img src="image/works/work4.png" alt="work_4">
+                    </a>
+                </li>
+                <li class="works__item item">
+                    <a href="#" class="popup-link">
+                        <img src="image/works/9.png" alt="work_5">
+                    </a>
+                </li>
+                <li class="works__item item">
+                    <a href="#" class="popup-link">
                         <img src="image/works/2.png" alt="work_6">
                     </a>
                 </li>
@@ -87,81 +104,46 @@
                 <h2 class="team__title title">small team</h2>
                 <p class="team__subtitle subtitle">Lorem ipsum dolor sit amet event landing template</p>
             </div>
-            <ul class="team-list list">
-                <li class="team-list__item item"><img src="image/team/team_3.png" alt="worker_1"></li>
-                <li class="team-list__item item">
-                    <img src="image/team/team_4.png" alt="worker_2">
-                    <div class="team-list__describe">
-                        <div class="d3"></div>
-                        <div class="describe-wrap">
-                            <div class="describe-header">
-                                <h3 class="describe-header__title">AL RAYHAN
-                                    <span>/ UI Designer</span>
-                                </h3>
-                            </div>
-                            <div class="describe-header__text">
-                                <p>Lorem Ipsum is not simply is an action designer random text
-                                    It has roots in a piece.
-                                </p>
-                            </div>
-                            <div class="describe-header__social">
-                                <ul class="icon-list">
-                                    <li class="icon-list__item">
-                                        <a href="https://facebook.com/" target="_blank">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li class="icon-list__item">
-                                        <a href="https://twitter.com/" target="_blank">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="icon-list__item">
-                                        <a href="https://dribbble.com/" target="_blank">
-                                            <i class="fab fa-dribbble"></i>
-                                        </a>
-                                    </li>
-                                    <li class="icon-list__item">
-                                        <a href="https://mail.google.com/" target="_blank">
-                                            <i class="far fa-envelope"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="team-list__item item"><img src="image/team/team_1.png" alt="worker_3"></li>
-                <li class="team-list__item item"><img src="image/team/team_2.png" alt="worker_4"></li>
-                <li class="team-list__item item"><img src="image/team/3.png" alt="worker_5"></li>
-                <li class="team-list__item item"><img src="image/team/team_3.png" alt="worker_6"></li>
+            <ul class="team__list list">
+                <li class="team__item item"><img src="image/team/team_3.png" alt="worker_1"></li>
+                <li class="team__item item"><img src="image/team/team_4.png" alt="worker_2"></li>
+                <li class="team__item item"><img src="image/team/team_1.png" alt="worker_3"></li>
+                <li class="team__item item"><img src="image/team/team_2.png" alt="worker_4"></li>
+                <li class="team__item item"><img src="image/team/3.png" alt="worker_5"></li>
+                <li class="team__item item"><img src="image/team/team_3.png" alt="worker_6"></li>
             </ul>
         </div>
     </section>
 </main>
 
-<footer>
-    <div class="contacts wrap">
-        <form class="contact-form">
-            <input class="contact-form__input" type="text" placeholder="Name*">
-            <input class="contact-form__input" type="text" placeholder="Subject*">
-            <input class="contact-form__input" type="email" placeholder="E-mail*">
-            <textarea class="contact-form__input textarea" placeholder="Message*"></textarea>
-            <input class="contact-form__submit" type="submit" value="SEND MESSAGE">
+<footer class="footer">
+    <div class="contact wrap">
+        <form class="contact__form">
+            <input class="contact__input" type="text" placeholder="Name*">
+            <input class="contact__input" type="text" placeholder="Subject*">
+            <input class="contact__input" type="email" placeholder="E-mail*">
+            <textarea class="contact__input textarea" placeholder="Message*"></textarea>
+            <input class="contact__submit" type="submit" value="SEND MESSAGE">
         </form>
-        <div class="contacts-address">
-            <div class="block-address">
-                <ul class="block-address-list">
-                    <li class="block-address-list__item">Address line 1</li>
-                    <li class="block-address-list__item">Address line 2</li>
-                    <li class="block-address-list__item">Phone: +548 945645</li>
-                    <li class="block-address-list__item">Fax: +456456 54546</li>
-                    <li class="block-address-list__item">Web: www.designagency.net</li>
-                    <li class="block-address-list__item">E-mail: info@designagency.net</li>
+        <div class="address">
+            <div class="address__block">
+                <ul class="address__list">
+                    <li class="address__item">Address line 1</li>
+                    <li class="address__item">Address line 2</li>
+                    <li class="address__item">
+                        <a href="tel:+548945645">Phone: +548 945645</a>
+                    </li>
+                    <li class="address__item">
+                        <a href="tel:+45645654546">Fax: +456456 54546</a>
+                    </li>
+                    <li class="address__item">Web: www.designagency.net</li>
+                    <li class="address__item">
+                        <a href="mailto:info@designagency.net">E-mail: info@designagency.net</a>
+                    </li>
                 </ul>
             </div>
-            <div class="contacts-map">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A04fb5036d27663489d0fa1fb1c850b404c9004a6efa03de59d2a30f45d188316&amp;source=constructor"
+            <div class="map">
+                <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A04fb5036d27663489d0fa1fb1c850b404c9004a6efa03de59d2a30f45d188316&amp;source=constructor"
                         width="455" height="224"></iframe>
             </div>
         </div>
@@ -169,37 +151,42 @@
 
     <div class="social">
         <h3 class="social__title">FOLLOW US</h3>
-        <div class="social-icon">
-            <ul class="social-icon-list">
-                <li class="social-icon-list__item">
-                    <a href="https://www.pinterest.com/" target="_blank">
-                        <i class="fab fa-pinterest-p"></i>
-                    </a>
-                </li>
-                <li class="social-icon-list__item">
-                    <a href="https://twitter.com/" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="social-icon-list__item">
-                    <a href="https://facebook.com/" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="social-icon-list__item">
-                    <a href="https://dribbble.com/" target="_blank">
-                        <i class="fab fa-dribbble"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="social__list">
+            <li class="social__item">
+                <a href="https://www.pinterest.com/" target="_blank">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </li>
+            <li class="social__item">
+                <a href="https://twitter.com/" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social__item">
+                <a href="https://facebook.com/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="social__item">
+                <a href="https://dribbble.com/" target="_blank">
+                    <i class="fab fa-dribbble"></i>
+                </a>
+            </li>
+        </ul>
     </div>
 </footer>
+
 <div id="popup" class="popup">
     <div class="popup__body">
         <div class="popup__content">
             <a href="#" class="popup__close close-popup">
                 <i class="far fa-times-circle"></i>
+            </a>
+            <a href="#" class="popup__next">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <a href="#" class="popup__prev">
+                <i class="fas fa-chevron-left"></i>
             </a>
             <div class="popup__image">
                 <img src="image/popup_img_1.png" alt="">
@@ -207,18 +194,48 @@
         </div>
     </div>
 </div>
-<div id="popup_2" class="popup">
-    <div class="popup__body">
-        <div class="popup__content">
-            <a href="#" class="popup__close close-popup">
-                <i class="far fa-times-circle"></i>
-            </a>
-            <div class="popup__image">
-                <img src="image/popup_img_2.png" alt="">
+
+<template id="team-template">
+    <div class="team-describe">
+        <div class="d3"></div>
+        <div class="team-describe__wrap">
+            <h3 class="team-describe__title">AL RAYHAN
+                <span>/ UI Designer</span>
+            </h3>
+            <div class="team-describe__text">
+                <p>
+                    Lorem Ipsum is not simply is an action designer random text
+                    It has roots in a piece.
+                </p>
+            </div>
+            <div class="team-social">
+                <ul class="team-social__list icon-list">
+                    <li class="team-social__item">
+                        <a href="https://facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="team-social__item">
+                        <a href="https://twitter.com/" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="team-social__item">
+                        <a href="https://dribbble.com/" target="_blank">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </li>
+                    <li class="team-social__item">
+                        <a href="https://mail.google.com/" target="_blank">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
+</template>
 <script src="js/popup.js"></script>
+<script src="js/teamDecsriprion.js"></script>
 </body>
 </html>
