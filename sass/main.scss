@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+$Montserrat: 'Montserrat', sans-serif;
+$Merriweather: 'Merriweather', serif;
+$Raleway: 'Raleway', sans-serif;
+$colorGray: #f9fbfb;
+
+@mixin grey {
+  background-color: $colorGray;
+}
+
+@mixin top {
+  padding-top: 130px;
+}
+
+@mixin transition {
+  transition: all 1s ease-out;
+}
+
+@mixin flexColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin popupBtn {
+  position: absolute;
+  top: 50%;
+  font-size: 34px;
+  color: #ff1111;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 38px;
+  font-weight: 700;
+  padding: 0 0 15px 0;
+  text-transform: uppercase;
+  font-family: $Montserrat;
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.62;
+  font-size: 17px;
+  font-family: $Merriweather;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.list {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  padding: 0;
+  max-width: 370px;
+  list-style-type: none;
+  margin-top: 15px;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1140px;
+  text-align: center;
+  color: #000000;
+  line-height: 28px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #eff0f2;
+  text-align: center;
+  padding: 65px 0 0 0;
+  text-transform: uppercase;
+  font-family: $Montserrat;
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+  &__logo {
+    text-align: center;
+    width: 101px;
+    height: 29px;
+    border: 6px solid #170f1c;
+    text-shadow: 0 0 2px rgba(21, 21, 22, 0.75);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 1px;
+
+    span {
+      color: #77efe5;
+      font-size: 21px;
+      letter-spacing: 1.2px;
+    }
+  }
+  &__greeting {
+    padding: 200px 0 0 0;
+    }
+  &__title {
+    text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.24);
+    color: #505050;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 2.7px;
+
+    span {
+      background-color: rgba(118, 244, 234, 0.5);
+    }
+  }
+
+  .button {
+    margin-top: 150px;
+    margin-bottom: 200px;
+    width: 232px;
+    height: 53px;
+    border-radius: 2px;
+    border: 2px solid #000000;
+    opacity: 0.5;
+    transition: all 2s ease-out;
+
+    &:hover {
+      transition: all 2s ease-out;
+      background-color: rgba(118, 244, 234, 0.7);
+      opacity: 0.9;
+    }
+    &__title {
+      font-family: $Montserrat;
+      margin: 0;
+      color: #000000;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      opacity: 0.75;
+      letter-spacing: 2.16px;
+    }
+  }
+}
+
+.about {
+  @include grey;
+
+  .wrap{
+    max-width: 1020px;
+  }
+  &__header{
+    @include top;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 150px 0 165px 0;
+    @media screen and  (max-width: 1070px){
+      @include flexColumn;
+    }
+    @media (min-width: 700px) and (max-width: 1200px){
+      justify-content: space-around;
+    }
+    @media (min-width: 320px) and (max-width: 700px){
+      justify-content: space-around;
+    }
+
+    &__describe {
+      max-width: 480px;
+    }
+
+    &__title {
+      margin: 0;
+      opacity: 0.75;
+      font-family: $Merriweather;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      padding: 30px 0;
+      margin: 0;
+      text-align: justify;
+      opacity: 0.74;
+      font-family: $Raleway;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      text-transform: none;
+    }
+  }
+}
+
+.works{
+  &__header{
+    @include top;
+  }
+  &__list {
+    padding: 120px 0 125px 0;
+  }
+  &__item {
+    height: 359px;
+  }
+}
+
+.team{
+  @include grey;
+
+  &__header {
+    padding-top: 100px;
+  }
+  &__list {
+    padding: 120px 0 190px 0;
+  }
+  &__item {
+    height: 440px;
+    position: relative;
+
+    &:hover .team-describe {
+      @include transition;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.team-describe {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  z-index: 1;
+  width: 335px;
+  height: 240px;
+  box-shadow: 3px 6px 16px rgba(20, 20, 21, 0.18);
+  background-color: #6df6eb;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.5s ease-out;
+  @media screen and  (max-width: 420px){
+    height: 180px;
+    width: 90%;
+    top: 45%;
+    left: 5%;
+  }
+
+  .d3 {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 21px solid transparent;
+    border-right: 21px solid transparent;
+    border-bottom: 37px solid #71f6ec;
+  }
+
+  &__wrap {
+    max-width: 100%;
+    padding: 40px 0 0 40px;
+    @media screen and  (max-width: 420px){
+      padding: 5%;
+      height: 70%;
+    }
+  }
+  &__title {
+    text-align: left;
+    margin: 0;
+    opacity: 0.95;
+    line-height: 24px;
+    color: #272727;
+    font-family: $Merriweather;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+
+    span {
+      opacity: 0.95;
+      color: #767070;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.45px;
+      padding-left: 5px;
+      text-transform: none;
+    }
+  }
+  &__text {
+    width: 239px;
+    height: 64px;
+    text-align: left;
+    text-transform: none;
+    opacity: 0.8;
+    color: #000000;
+    font-family: $Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.16px;
+  }
+  .team-social {
+    padding-top: 35px;
+    @media screen and  (max-width: 420px){
+      padding-top: 5%;
+    }
+
+    &__item {
+      list-style-type: none;
+
+      &:hover i {
+        @include transition;
+        transform: scale(1.5);
+      }
+
+      a i {
+        @include transition;
+      }
+
+      i {
+        margin-right: 15px;
+        width: 8px;
+        height: 13px;
+        opacity: 0.7;
+        color: #000000;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21.57px;
+        letter-spacing: 0.15px;
+      }
+    }
+  }
+}
+
+.icon-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer {
+  background: rgba(248, 250, 251, 0.1) url("../image/christmas_snow_trees-wide.jpg.png") no-repeat center;
+  background-size: cover;
+
+  .contact {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 700px;
+    text-align: left;
+    @media (min-width: 700px) and (max-width: 1200px){
+      padding: 20px;
+      flex-direction: column;
+    }
+    @media (min-width: 320px) and (max-width: 700px){
+      width: 90%;
+      padding: 20px;
+    }
+
+    &__form {
+      width: 614px;
+      height: 460px;
+      box-shadow: 0 0 30px rgba(21, 21, 21, 0.12);
+      background-color: rgba(2, 22, 35, 0.71);
+    }
+    &__input {
+      margin: 0 30px 0 30px;
+      padding: 15px 0;
+      width: 90%;
+      border: none;
+      border-bottom: 1px solid #ffffff;
+      background: transparent;
+      outline: none;
+      color: #ffffff;
+      font-size: 16px;
+      height: 40px;
+    }
+
+    .textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    &__submit {
+      margin: 40px 0 0 30px;
+      border: none;
+      width: 244px;
+      height: 53px;
+      border-radius: 2px;
+      background-color: #6eeee4;
+      outline: none;
+      color: #000000;
+      font-family: $Montserrat;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      text-transform: uppercase;
+      @include transition;
+      @media (min-width: 320px) and (max-width: 700px){
+        position: center;
+        margin: 40px 0 0 0;
+      }
+
+      &:hover {
+        transition: all 1s ease-out;
+        background-color: #479993;
+        color: #00004f;
+      }
+    }
+
+    .address {
+      width: 500px;
+      height: 460px;
+      box-shadow: 0 0 3px rgba(21, 21, 21, 0.16);
+      background-color: rgba(2, 22, 35, 0.71);
+      @media (min-width: 320px) and (max-width: 700px){
+        margin-top: 20px;
+        width: 100%;
+      }
+      @media (min-width: 700px) and (max-width: 1200px){
+        margin-top: 20px;
+        width: 614px;
+      }
+
+      &__list {
+        margin: 0;
+        padding: 30px 0 20px 30px;
+        text-transform: none;
+      }
+      &__item {
+        margin: 0;
+        opacity: 0.7;
+        color: #ffffff;
+        font-family: $Raleway;
+        list-style-type: none;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        &:nth-child(5) {
+          padding-top: 15px;
+        }
+      }
+    }
+
+    .map {
+      padding-left: 22px;
+    }
+  }
+
+  .social {
+    width: 100%;
+    height: 316px;
+    background-color: #262b2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+      margin: 0;
+      opacity: 0.8;
+      color: #ffffff;
+      font-family: $Raleway;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 25px;
+      text-transform: uppercase;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    &__item {
+      margin: 5px;
+      list-style-type: none;
+      width: 46px;
+      height: 40px;
+      background-color: #8a8a8a;
+      opacity: 0.4;
+      text-align: center;
+      @include transition;
+
+      i {
+        opacity: 0.95;
+        color: #faf4f4;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 40px;
+      }
+
+      &:hover {
+        @include transition;
+        background-color: #71f6eb;
+        opacity: 1;
+      }
+
+      &:hover i {
+        transition: 1s;
+        color: #000000;
+        opacity: 0.95;
+      }
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+
+  &__body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.8s ease 0s;
+  }
+  &__content {
+    max-width: 100%;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ff1111;
+  }
+  &__next{
+    @include popupBtn;
+    right: 2%;
+  }
+  &__prev{
+    @include popupBtn;
+    left: 2%;
+  }
+
+  &__image img {
+    max-width: 100%;
+  }
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+
+  .popup__content {
+    transform: perspective(0px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@media screen and  (max-width: 1070px) {
+  .content__block {
+    padding-top: 20px;
+    @include flexColumn;
+    max-width: 90%;
+  }
+}
+
+@media screen and  (max-width: 420px) {
+  .item img {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  .header__logo {
+    margin-left: 5%;
+  }
+
+  .map__iframe {
+    width: 95%;
+  }
+
+  .list{
+    justify-content: space-around;
+  }
+
+  .header__title {
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+  .header__logo {
+    margin-left: 5%;
+  }
+
+  .content__image {
+    max-width: 90%;
+  }
+
+  .content__image img {
+    max-width: 100%;
+  }
+
+  .list{
+    justify-content: space-around;
+  }
+
+  .header__title, .title {
+    line-height: 48px;
+  }
+
+  .contact__input {
+    margin: 0 5% 0 5%;
+  }
+
+  .map, .address__list {
+    padding: 0 5%;
+  }
+
+  .contact__form {
+    @include flexColumn;
+  }
+
+  .map__iframe {
+    width: 100%;
+  }
+}
